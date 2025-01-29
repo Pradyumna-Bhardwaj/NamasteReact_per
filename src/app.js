@@ -4,9 +4,6 @@
 // const root = document.getElementById("root");
 // root.appendChild(heading);
 
-// Manipulate the HTML DOM using React
-
-// Create nested React Elements
 
 import React from "react";
 import ReactDOM from "react-dom/client";
