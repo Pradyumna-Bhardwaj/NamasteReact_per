@@ -4,7 +4,6 @@
 // const root = document.getElementById("root");
 // root.appendChild(heading);
 
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Body from "./components/Body";
