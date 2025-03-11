@@ -1,6 +1,6 @@
 const restaurantList = [
     {
-      type: "restaurant",
+      type: "recommended",
       data: {
         type: "F",
         id: "74453",
@@ -112,7 +112,7 @@ const restaurantList = [
           preferentialService: false,
           iconType: "EMPTY",
         },
-        promoted: false,
+        promoted: true,
         avgRating: "4.0",
         totalRatings: 1000,
         new: false,
@@ -120,7 +120,7 @@ const restaurantList = [
       subtype: "basic",
     },
     {
-      type: "restaurant",
+      type: "recommended",
       data: {
         type: "F",
         id: "410476",
@@ -240,7 +240,7 @@ const restaurantList = [
       subtype: "basic",
     },
     {
-      type: "restaurant",
+      type: "recommended",
       data: {
         type: "F",
         id: "81094",
@@ -360,7 +360,7 @@ const restaurantList = [
       subtype: "basic",
     },
     {
-      type: "restaurant",
+      type: "recommmended",
       data: {
         type: "F",
         id: "311443",
@@ -480,7 +480,7 @@ const restaurantList = [
       subtype: "basic",
     },
     {
-      type: "restaurant",
+      type: "recommmended",
       data: {
         type: "F",
         id: "307070",
@@ -600,7 +600,7 @@ const restaurantList = [
       subtype: "basic",
     },
     {
-      type: "restaurant",
+      type: "fastDdelivery",
       data: {
         type: "F",
         id: "76858",
@@ -720,7 +720,7 @@ const restaurantList = [
       subtype: "basic",
     },
     {
-      type: "restaurant",
+      type: "fastDdelivery",
       data: {
         type: "F",
         id: "617279",
@@ -839,7 +839,7 @@ const restaurantList = [
       subtype: "basic",
     },
     {
-      type: "restaurant",
+      type: "fastDdelivery",
       data: {
         type: "F",
         id: "469264",
@@ -959,7 +959,7 @@ const restaurantList = [
       subtype: "basic",
     },
     {
-      type: "restaurant",
+      type: "fastDdelivery",
       data: {
         type: "F",
         id: "395204",
@@ -1080,7 +1080,7 @@ const restaurantList = [
       subtype: "basic",
     },
     {
-      type: "restaurant",
+      type: "fastDdelivery",
       data: {
         type: "F",
         id: "193541",
@@ -1209,7 +1209,7 @@ const restaurantList = [
       subtype: "basic",
     },
     {
-      type: "restaurant",
+      type: "highUserRetention",
       data: {
         type: "F",
         id: "475510",
@@ -1329,7 +1329,7 @@ const restaurantList = [
       subtype: "basic",
     },
     {
-      type: "restaurant",
+      type: "highUserRetention",
       data: {
         type: "F",
         id: "127596",
@@ -1449,7 +1449,7 @@ const restaurantList = [
       subtype: "basic",
     },
     {
-      type: "restaurant",
+      type: "highUserRetention",
       data: {
         type: "F",
         id: "64656",
@@ -1569,7 +1569,7 @@ const restaurantList = [
       subtype: "basic",
     },
     {
-      type: "restaurant",
+      type: "highUserRetention",
       data: {
         type: "F",
         id: "255204",
@@ -1688,7 +1688,7 @@ const restaurantList = [
       subtype: "basic",
     },
     {
-      type: "restaurant",
+      type: "highUserRetention",
       data: {
         type: "F",
         id: "664656",

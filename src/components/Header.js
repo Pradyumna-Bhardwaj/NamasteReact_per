@@ -1,9 +1,12 @@
 import { LOGO_URL } from "../utils/constants";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { Link } from "react-router";
+import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 const Title = () => (
   <a href="/">
-    <img className="logo" src={LOGO_URL} alt="Food Fire Logo" />
+    <img className="w-20" src={LOGO_URL} alt="Food Fire Logo" />
   </a>
 );
 const Header = () => {
@@ -13,19 +16,38 @@ const Header = () => {
     setisLoggedIn((prevIsLoggedIn) => !prevIsLoggedIn);
   };
 
-  return (
-    <div className="header">
-      <Title />
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-          <li>
-            <i className="fa-solid fa-cart-shopping"></i>
-          </li>
-          <li>
+  const { loggedInUser } = useContext(UserContext);
 
+  const cartItems = useSelector((store) => store.cart.items);
+
+  return (
+    <div className="flex justify-between bg-yellow-400 shadow-xl">
+      <Title />
+      <div className="flex items-center">
+        <ul className="flex p-4">
+          <li className="px-4 font-bold text-xl">
+            <Link to="/" replace>
+              Home
+            </Link>
+          </li>
+          <li className="px-4 font-bold text-xl">
+            <Link to="/grocery">Grocery</Link>
+          </li>
+          <li className="px-4 font-bold text-xl">
+            <Link to="/about">About</Link>
+          </li>
+          <li className="px-4 font-bold text-xl">
+            <Link to="/contact">Contact</Link>
+          </li>
+          <li className="px-4 font-bold text-xl">
+            <Link to="/cart">
+              <span className="font-bold text-xl pr-1">Cart</span>
+              <i className="fa-solid fa-cart-shopping pr-1"></i>
+              {cartItems.length}
+            </Link>
+          </li>
+          <li className="pl-2 pr-4 font-bold text-xl">{loggedInUser}</li>
+          <li>
             {/* {isLoggedIn === false ? (
               <button className="login-btn" onClick={handleOnCLick}>
                 Login
@@ -36,16 +58,16 @@ const Header = () => {
               </button>
             )} */}
 
-            {
-              <button
-                className={isLoggedIn ? "logout-btn" : "login-btn"}
-                onClick={handleOnCLick}
-              >
-                {isLoggedIn ? "Logout" : "Login"}
-              </button>
-            }
-
-            
+            <button
+              className={
+                isLoggedIn
+                  ? "bg-red-500 rounded-xl pb-1 px-4 font-bold text-xl"
+                  : "bg-green-500 rounded-xl pb-1 px-4 font-bold text-xl"
+              }
+              onClick={handleOnCLick}
+            >
+              {isLoggedIn ? "Logout" : "Login"}
+            </button>
           </li>
         </ul>
       </div>
